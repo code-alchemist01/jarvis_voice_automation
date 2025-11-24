@@ -14,8 +14,8 @@ try:
     import pygame
     pygame.mixer.init()
     ELEVENLABS_AVAILABLE = True
-    except ImportError:
-        pass  # ElevenLabs not available, using pyttsx3 only
+except ImportError:
+    pass  # ElevenLabs not available, using pyttsx3 only
 
 # Try to import pygame for audio playback
 PYGAME_AVAILABLE = False
@@ -24,7 +24,7 @@ try:
     pygame.mixer.init()
     PYGAME_AVAILABLE = True
 except ImportError:
-    print("Pygame not available for audio playback")
+    pass  # Pygame not available for audio playback
 
 
 class TextToSpeech:
