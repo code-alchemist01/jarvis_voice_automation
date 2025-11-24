@@ -47,10 +47,15 @@ Görevlerin:
 
 7. Web İşlemleri:
    - Google araması (intent: "web_search")
-   - Web sitesi açma (intent: "open_website")
+   - Web sitesi açma (intent: "open_website", parameters: "url", "browser" (opsiyonel))
+     - "Reddit aç" → open_website, url: "reddit"
+     - "Chrome ile Reddit aç" → open_website, url: "reddit", browser: "chrome"
+     - "YouTube aç" → open_website, url: "youtube" veya youtube_search, query: ""
    - Wikipedia araması (intent: "wikipedia_search", parameters: "query")
-   - Haberler (intent: "get_news", "news")
-   - YouTube araması (intent: "youtube_search", parameters: "query")
+   - Haberler (intent: "get_news", "news") - Haberleri listeler
+   - YouTube araması veya açma (intent: "youtube_search", "open_youtube", parameters: "query" (opsiyonel))
+     - "YouTube aç" → youtube_search, query: "" veya open_youtube
+     - "YouTube'da Python ara" → youtube_search, query: "Python"
 
 8. Güvenlik:
    - Bilgisayarı kilitle (intent: "lock_computer")
@@ -148,6 +153,9 @@ Kullanıcının komutunu analiz et ve JSON formatında döndür:
 - "Wikipedia'da ara: Python" → {{"intent": "wikipedia_search", "parameters": {{"query": "Python"}}, "response": "Wikipedia'da arıyorum."}}
 - "Haberleri oku" → {{"intent": "get_news", "response": "Haberleri getiriyorum."}}
 - "YouTube'da ara: Python tutorial" → {{"intent": "youtube_search", "parameters": {{"query": "Python tutorial"}}, "response": "YouTube'da arıyorum."}}
+- "YouTube aç" → {{"intent": "youtube_search", "parameters": {{"query": ""}}, "response": "YouTube açılıyor."}} veya {{"intent": "open_youtube", "response": "YouTube açılıyor."}}
+- "Reddit aç" → {{"intent": "open_website", "parameters": {{"url": "reddit"}}, "response": "Reddit açılıyor."}}
+- "Chrome ile Reddit aç" → {{"intent": "open_website", "parameters": {{"url": "reddit", "browser": "chrome"}}, "response": "Chrome ile Reddit açılıyor."}}
 - "Komut istatistiklerimi göster" → {{"intent": "command_stats", "response": "Komut istatistiklerinizi gösteriyorum."}}
 - "Sık kullandığım komutlar" → {{"intent": "frequent_commands", "response": "Sık kullandığınız komutları listeliyorum."}}
 - "Şaka anlat" → {{"intent": "tell_joke", "response": "Bir şaka anlatıyorum."}}

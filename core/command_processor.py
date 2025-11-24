@@ -241,7 +241,15 @@ class CommandProcessor:
             
             elif intent == 'open_website':
                 url = parameters.get('url', text)
-                result = web_search.open_website(url)
+                browser = parameters.get('browser', None)
+                # Extract browser from text if specified
+                if not browser:
+                    text_lower = text.lower()
+                    for browser_name in ['chrome', 'google chrome', 'edge', 'microsoft edge', 'firefox']:
+                        if browser_name in text_lower:
+                            browser = browser_name
+                            break
+                result = web_search.open_website(url, browser)
                 response = llm_response if llm_response else result[1]
                 return result[0], response
             
@@ -488,9 +496,13 @@ class CommandProcessor:
                 response = llm_response if llm_response else result[1]
                 return result[0], response
             
-            elif intent == 'youtube_search':
-                query = parameters.get('query', text)
-                result = web_search.search_youtube(query)
+            elif intent == 'youtube_search' or intent == 'open_youtube':
+                query = parameters.get('query', None)
+                # If no query, just open YouTube
+                if not query or query.strip() == '':
+                    result = web_search.search_youtube(None)
+                else:
+                    result = web_search.search_youtube(query)
                 response = llm_response if llm_response else result[1]
                 return result[0], response
             
