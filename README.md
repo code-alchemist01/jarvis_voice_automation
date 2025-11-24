@@ -1,24 +1,24 @@
 # JARVIS Voice Automation
 
-A sophisticated desktop voice assistant inspired by Iron Man's JARVIS, built with PyQt5. Control your computer through natural voice commands in Turkish and English, powered by advanced AI language understanding.
+An intelligent desktop voice assistant that brings the power of natural language control to your computer. Built with modern Python technologies and AI integration, JARVIS understands your voice commands and executes complex tasks seamlessly across your system.
 
 ## 🌟 Overview
 
-JARVIS Voice Automation transforms your computer into an intelligent voice-controlled system. Using state-of-the-art speech recognition and natural language processing, it understands your commands contextually and executes complex tasks seamlessly.
+JARVIS Voice Automation reimagines how you interact with your computer. Instead of clicking through menus or typing commands, simply speak naturally and watch as your assistant understands context, handles complex requests, and manages your digital environment with precision.
 
 ## ✨ Key Features
 
 ### 🎤 Natural Voice Control
-- Continuous voice recognition with real-time processing
-- Support for Turkish and English commands
-- Context-aware command understanding using LLM integration
-- Typo-tolerant command parsing
+- Continuous listening mode that captures commands in real-time
+- Multi-language support with Turkish and English recognition
+- Contextual understanding powered by local LLM integration
+- Intelligent error tolerance for natural speech patterns
 
 ### 🧠 Intelligent Command Processing
-- **LLM-Powered Understanding**: Uses local LLM (LM Studio compatible) for natural language comprehension
-- **Multi-Step Task Execution**: Handle complex commands like "Open Notepad, then open Calculator"
-- **Scenario Management**: Create and execute predefined task sequences
-- **Command History & Learning**: Tracks usage patterns and learns from your preferences
+- **AI-Powered Comprehension**: Leverages local language models for nuanced command interpretation
+- **Complex Task Orchestration**: Seamlessly handles multi-step instructions with dependency management
+- **Automated Workflows**: Define and execute custom scenarios for repetitive tasks
+- **Adaptive Learning**: Builds understanding of your preferences and usage patterns over time
 
 ### 🎯 System Control
 - **Application Management**: Launch any installed application by name
