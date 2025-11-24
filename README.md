@@ -6,6 +6,9 @@ An intelligent desktop voice assistant that brings the power of natural language
 
 JARVIS Voice Automation reimagines how you interact with your computer. Instead of clicking through menus or typing commands, simply speak naturally and watch as your assistant understands context, handles complex requests, and manages your digital environment with precision.
 
+<img width="785" height="684" alt="image" src="https://github.com/user-attachments/assets/250036ee-78d6-4089-85d3-7f05ebcd65b6" />
+
+
 ## ✨ Key Features
 
 ### 🎤 Natural Voice Control
